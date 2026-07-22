@@ -23,7 +23,7 @@ h1{margin:0;font-size:clamp(1.35rem,5vw,2rem)}.sub{color:var(--muted);margin-top
 #tab-overview:checked~#overview,#tab-training:checked~#training,#tab-load:checked~#load{display:block}.grid{display:grid;gap:14px}.card{overflow:hidden;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:0 10px 28px rgba(0,0,0,.25)}
 .card-title{padding:10px 12px;font-weight:700;border-bottom:1px solid var(--line)}.dashboard-image{display:block;width:100%;height:auto;background:white}
 .image-wrap{display:block;overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y pinch-zoom}.zoomable-image{cursor:zoom-in}
-.image-viewer{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));background:rgba(0,0,0,.94);cursor:zoom-out;-webkit-tap-highlight-color:transparent}.image-viewer.open{display:flex}.image-viewer img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;background:#fff;box-shadow:0 18px 60px rgba(0,0,0,.55)}.image-viewer-hint{position:fixed;top:max(10px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));padding:7px 10px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(13,17,23,.78);color:white;font-size:.78rem;font-weight:700;pointer-events:none}
+.image-viewer{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:max(4px,env(safe-area-inset-top)) max(4px,env(safe-area-inset-right)) max(4px,env(safe-area-inset-bottom)) max(4px,env(safe-area-inset-left));background:rgba(0,0,0,.96);cursor:zoom-out;-webkit-tap-highlight-color:transparent}.image-viewer.open{display:flex}.image-viewer img{display:block;width:auto;height:auto;max-width:calc(100vw - 8px);max-height:calc(100vh - 8px);object-fit:contain;background:#fff;box-shadow:0 18px 60px rgba(0,0,0,.55)}.image-viewer-hint{position:fixed;top:max(10px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));padding:7px 10px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(13,17,23,.78);color:white;font-size:.78rem;font-weight:700;pointer-events:none}
 body.viewer-open{overflow:hidden}
 @media(min-width:760px){.grid.two,.grid.overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
@@ -33,7 +33,7 @@ body.viewer-open{overflow:hidden}
 <header class="header"><h1>Training Dashboard</h1></header>
 <div class="refresh-card" role="button" tabindex="0" onclick="refreshDashboard()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();refreshDashboard();}">
 <div class="refresh-title" id="refresh-label">&#8635; Refresh dashboard</div>
-<div class="refresh-time"><strong>Last update:</strong> 2026-07-22 12:46:33</div></div>
+<div class="refresh-time"><strong>Last update:</strong> 2026-07-22 12:54:46</div></div>
 <input class="tab-input" type="radio" name="tabs" id="tab-overview" checked>
 <input class="tab-input" type="radio" name="tabs" id="tab-training">
 <input class="tab-input" type="radio" name="tabs" id="tab-load">
@@ -46,76 +46,76 @@ body.viewer-open{overflow:hidden}
 <article class="card">
 <div class="card-title">Current Training Status</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/CurrentTrainingStatus.png?v=20260722124633" alt="Current Training Status" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/CurrentTrainingStatus.png?v=20260722125446" alt="Current Training Status" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">Last 4 Weeks</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/Last4Weeks.png?v=20260722124633" alt="Last 4 Weeks" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/Last4Weeks.png?v=20260722125446" alt="Last 4 Weeks" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">Upcoming Races</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/UpcomingRaces.png?v=20260722124633" alt="Upcoming Races" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/UpcomingRaces.png?v=20260722125446" alt="Upcoming Races" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">PRs &amp; Season Bests</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/PRs.png?v=20260722124633" alt="PRs &amp; Season Bests" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/PRs.png?v=20260722125446" alt="PRs &amp; Season Bests" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 </div></section>
 <section class="panel" id="training"><div class="grid two">
 <article class="card">
 <div class="card-title">My Training</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/chtMyTraining.png?v=20260722124633" alt="My Training" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/chtMyTraining.png?v=20260722125446" alt="My Training" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">Weekly TSS</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/chtwklyTSS.png?v=20260722124633" alt="Weekly TSS" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/chtwklyTSS.png?v=20260722125446" alt="Weekly TSS" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">Run Training</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/chtRunTraining.png?v=20260722124633" alt="Run Training" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/chtRunTraining.png?v=20260722125446" alt="Run Training" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">Bike Training</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/chtBikeTraining.png?v=20260722124633" alt="Bike Training" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/chtBikeTraining.png?v=20260722125446" alt="Bike Training" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">Swim Training</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/chtSwimTraining.png?v=20260722124633" alt="Swim Training" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/chtSwimTraining.png?v=20260722125446" alt="Swim Training" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">Strength Training</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/chtStrengthTraining.png?v=20260722124633" alt="Strength Training" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/chtStrengthTraining.png?v=20260722125446" alt="Strength Training" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 </div></section>
 <section class="panel" id="load"><div class="grid two">
 <article class="card">
 <div class="card-title">CTL Composition</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/chtCTLComposition.png?v=20260722124633" alt="CTL Composition" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/chtCTLComposition.png?v=20260722125446" alt="CTL Composition" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">emaACT Composition</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/chtEmaACTComposition.png?v=20260722124633" alt="emaACT Composition" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/chtEmaACTComposition.png?v=20260722125446" alt="emaACT Composition" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">CTL vs ACT</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/chtCTLvsACT.png?v=20260722124633" alt="CTL vs ACT" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/chtCTLvsACT.png?v=20260722125446" alt="CTL vs ACT" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 <article class="card">
 <div class="card-title">TSB &amp; Load Ratio</div>
 <div class="image-wrap">
-<img class="dashboard-image zoomable-image" src="images/chtTSBLoadRatio.png?v=20260722124633" alt="TSB &amp; Load Ratio" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
+<img class="dashboard-image zoomable-image" src="images/chtTSBLoadRatio.png?v=20260722125446" alt="TSB &amp; Load Ratio" role="button" tabindex="0" onclick="openImageViewer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageViewer(this);}">
 </div></article>
 </div></section>
 </main>
